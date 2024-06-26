@@ -5,9 +5,11 @@ struct ListIndex {
 	int value;
 };
 struct List
-{
+{	
+private:
 	ListIndex* first;
 	int size;
+public:
 	List() : size(0),first(nullptr){}
 	void list(){
 		ListIndex* aux = first;
@@ -33,5 +35,25 @@ struct List
 			aux->next = new ListIndex(v);
 			this->size++;
 		}
+	}
+	void add(int v,int pos){
+		
+	}
+	void put(int v,int pos){
+		if (pos > (this->size)-1){
+			std::cout << "Invalid position";
+		}
+		else{
+			int count = 0;
+			ListIndex* aux = first;
+			while (count < pos){
+				aux = aux->next;
+				count++;
+			}
+			aux.value = v;
+		}
+	}
+	int size(){
+		return this->size;
 	}
 };
