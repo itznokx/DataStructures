@@ -10,6 +10,8 @@ int main (void){
 	listTest->add(37);
 	listTest->add(5);
 	listTest->add(23);
+	listTest->put(902,1);
+	listTest->add(507,3);
 	listTest->list();
 	return 0;
 }

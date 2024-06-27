@@ -48,7 +48,7 @@ public:
 			}else{
 				int count = 0;
 				ListIndex* aux = first;
-				while (count == pos-1){
+				while (count < pos-1){
 					aux = aux->next;
 					count++;
 				}
@@ -66,7 +66,7 @@ public:
 		else{
 			int count = 0;
 			ListIndex* aux = first;
-			while (count == pos-1){
+			while (count < pos){
 				aux = aux->next;
 				count++;
 			}
