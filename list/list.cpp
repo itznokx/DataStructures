@@ -16,7 +16,7 @@ public:
 		if (aux==nullptr)
 			std::cout << "Empty list";
 		while (aux != nullptr){
-			std::cout << aux->value;
+			std::cout << aux->value << " ";
 			aux = aux->next;
 		}
 	}
@@ -70,10 +70,10 @@ public:
 				aux = aux->next;
 				count++;
 			}
-			aux.value = v;
+			aux->value = v;
 		}
 	}
-	int size(){
+	int getSize(){
 		return this->size;
 	}
 };
