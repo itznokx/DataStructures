@@ -4,6 +4,7 @@ struct ListIndex {
 	ListIndex* next;
 	int value;
 };
+// The linkedlist is index-0 based
 struct List
 {	
 private:
@@ -37,7 +38,7 @@ public:
 		}
 	}
 	void add(int v,int pos){
-		if (pos > (this->size)-1){
+		if (pos >this->size){
 			std::cout << "Invalid position";
 		}
 		else{
@@ -60,7 +61,7 @@ public:
 		}
 	}
 	void put(int v,int pos){
-		if (pos > (this->size)-1){
+		if (pos > this->size){
 			std::cout << "Invalid position";
 		}
 		else{
@@ -71,6 +72,18 @@ public:
 				count++;
 			}
 			aux->value = v;
+		}
+	}
+	int get(int pos){
+		if ((pos>=this->size)){
+			std::cout << "Invalid Position.\n";
+		}else{
+			ListIndex* aux = this->first;
+			for (int i=0;i<this->size;i++){
+				if (i == pos)
+					return (aux->value);
+				aux = aux->next;
+			}
 		}
 	}
 	int getSize(){
