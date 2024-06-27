@@ -13,5 +13,6 @@ int main (void){
 	listTest->put(902,1);
 	listTest->add(507,3);
 	listTest->list();
+	std::cout << listTest->getSize();
 	return 0;
 }

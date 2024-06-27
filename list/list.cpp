@@ -55,7 +55,7 @@ public:
 				addIndex->next = aux->next;
 				aux->next = addIndex;
 			}
-			
+			this->size++;
 
 		}
 	}
