@@ -37,7 +37,27 @@ public:
 		}
 	}
 	void add(int v,int pos){
-		
+		if (pos > (this->size)-1){
+			std::cout << "Invalid position";
+		}
+		else{
+			ListIndex* addIndex = new ListIndex(v);
+			if (pos == 0){
+				addIndex->next = this->first;
+				this->first = addIndex;
+			}else{
+				int count = 0;
+				ListIndex* aux = first;
+				while (count == pos-1){
+					aux = aux->next;
+					count++;
+				}
+				addIndex->next = aux->next;
+				aux->next = addIndex;
+			}
+			
+
+		}
 	}
 	void put(int v,int pos){
 		if (pos > (this->size)-1){
@@ -46,7 +66,7 @@ public:
 		else{
 			int count = 0;
 			ListIndex* aux = first;
-			while (count < pos){
+			while (count == pos-1){
 				aux = aux->next;
 				count++;
 			}
