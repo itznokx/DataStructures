@@ -7,10 +7,8 @@ struct ListIndex {
 // The linkedlist is index-0 based
 struct List
 {	
-private:
 	ListIndex* first;
 	int size;
-public:
 	List() : size(0),first(nullptr){}
 	void list(){
 		ListIndex* aux = first;
@@ -85,9 +83,6 @@ public:
 				aux = aux->next;
 			}
 		}
-	}
-	int getSize(){
-		return this->size;
 	}
 	
 	LinkedIndex* getTail (){
