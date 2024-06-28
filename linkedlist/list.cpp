@@ -35,6 +35,7 @@ struct List
 			this->size++;
 		}
 	}
+	//add to pos
 	void add(int v,int pos){
 		if (pos >this->size){
 			std::cout << "Invalid position";
@@ -58,6 +59,7 @@ struct List
 
 		}
 	}
+	//change the pos value for v
 	void put(int v,int pos){
 		if (pos > this->size){
 			std::cout << "Invalid position";
@@ -84,7 +86,6 @@ struct List
 			}
 		}
 	}
-	
 	LinkedIndex* getTail (){
 		if (this->first==nullptr)
 			return nullptr
