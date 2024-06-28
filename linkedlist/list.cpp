@@ -89,4 +89,14 @@ public:
 	int getSize(){
 		return this->size;
 	}
+	
+	LinkedIndex* getTail (){
+		if (this->first==nullptr)
+			return nullptr
+		LinkedIndex* aux = this->first;
+		while(aux->next != nullptr){
+			aux = aux->next;
+		}
+		return aux;
+	}
 };
