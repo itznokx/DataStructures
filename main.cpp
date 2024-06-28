@@ -1,4 +1,4 @@
-#include "list/list.cpp"
+#include "linkedlist/list.cpp"
 #include <iostream>
 
 int main (void){
@@ -13,6 +13,8 @@ int main (void){
 	listTest->put(902,1);
 	listTest->add(507,3);
 	listTest->list();
-	std::cout << listTest->getSize();
+	listTest->sort();
+	listTest->list();
+	std::cout << listTest->size << "\n";
 	return 0;
 }
